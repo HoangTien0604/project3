@@ -23,6 +23,8 @@ services:
       MYSQL_DATABASE: notes_db
       MYSQL_USER: dev
       MYSQL_PASSWORD: devpass
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
     volumes:
       - dbdata:/var/lib/mysql
       - ./db/notes.sql:/docker-entrypoint-initdb.d/notes.sql
